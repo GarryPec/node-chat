@@ -1,0 +1,11 @@
+{
+  "name": "Chat-System",
+  "version": "0.0.1",
+  "description": "Web Based Chat System",
+  "dependencies": {
+    "express": "^4.10.2",
+    "mysql": "^2.5.4",
+    "request": "^2.59.0",
+    "socketio-file-upload": "^0.4.0"
+  }
+}

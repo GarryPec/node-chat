@@ -1,0 +1,272 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->	<head>
+		<title>ChillPlanet</title>
+		  <meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=0.75">
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" href="static/styles/farbtastic.css" type="text/css" />
+		<link rel="stylesheet"
+ href="static/styles/style.css" type="text/css" />
+        <script src="static/twemoji/js/twemoji.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<link href="static/styles/main.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="static/styles/emoticons.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="static/images/favicon.ico">
+
+		
+  <!--[if lt IE 10]>
+	<script>
+	  var $buoop = {c:2};
+	  function $buo_f(){
+	   var e = document.createElement("script");
+	   e.src = "//browser-update.org/update.min.js";
+	   document.body.appendChild(e);
+	  };
+	  try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+	  catch(e){window.attachEvent("onload", $buo_f)}
+	</script>
+  <!--<![endif]-->
+
+
+	<body>
+			<div id="outerContainer">
+	
+
+			
+			<div id="chatBox">
+
+         
+				<div id="loginBox" class="preChatPanel">
+					<div class="Loginheader">Inloggen:</div>
+					<form id="loginForm"autocomplete="off">
+
+<p id="logintext">
+
+						<label for="nickname">Nickname:</label><input type="text" id="nickname"maxlength="15"minlength="3"/>
+
+						<label for="password">Wachtwoord:</label><input type="password" id="password" />
+
+						<label for="age">Leeftijd:</label><input type="text" id="age"maxlength="2"/>
+
+						<label for="gender">Geslacht:</label><select id="gender"><option value="Man">Man</option><option value="Vrouw">Vrouw</option></select>
+
+						<label for="location">Woonplaats:</label><input type="text" id="location"maxlength="15" />
+
+						<label for="additionalInfo">Extra Info:</label><input type="text" id="additionalInfo"maxlength="30"/></p>
+
+						<p><label><input type="checkbox" name="ageWarning" id="remember"/><p id="ageWarning">Onthoud gegevens</label></p>
+
+						<br><input type="submit" id="loginButton"  class=buttonc-login value="Login" />
+
+<button id="registerButton" class=buttonc-red type="button">Registreer</button>
+						<p id="loginErrorText"></p>
+					</form>
+				</div>
+				
+							<div id="registerBox" class="regPanel">
+
+					<div class="registerHeader">
+
+Registreren:</div>
+					<form id="registerForm">
+<p id="registertext">
+						<label for="nickname">Nickname:</label><input type="text" id="regNickname" />
+
+						<label for="password">Wachtwoord:</label><input type="password" id="regPassword" />
+
+						<label for="passwordConfirm">Bevestig:</label><input type="password" id="regPasswordConfirm"/>
+
+						<label for="email">Email:</label><input type="text" id="email" /></p>
+<br>
+	<button class=buttonc-register  type="submit" id="registerSubmit";">Registreer</button>
+
+
+<button class=buttonc-registercancel  type="cancel" onclick="window.location='';return false;">Annuleer</button>
+
+					</form>
+
+				</div>
+				
+				<div id="actualChat">
+					<div id="left">
+						<div id="channelChat">
+							<div id="leftTop">
+								<div class="topicHeader" id="leftHeader">Welkom op de Chatbox</div>
+								<div class="scrollbarWrapper">
+									<div id="welcomeMessage">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+<div class="spacer"></div>
+  </tr>
+  <tr>
+   <td class="topicwelkom2">
+	<h2>Van harte welkom op Chillplanet, waar iedereen die zich normaal weet te gedragen mee mag doen!</h2>
+	<p>Geef nooit aan iemand hier je persoonlijke gegevens (tenzij je die absoluut wilt delen natuurlijk), dus ook niet aan mensen die (doen alsof ze) iets te maken hebben met Chillplanet.nl.</p>
+	<p>Internet is soms net als de echte wereld... er zijn ook mensen op te vinden die het niet goed met je voor hebben en dus is het bewaken van je privacy belangrijk!</p>
+	<p>Blijf zelf goed nadenken en veel plezier op Chillplanet <img src="/static/emoticons/pointface.gif" alt="^^">!</p>
+	<p>Uiteraard is Chillplanet niet aansprakelijk als mensen er toch voor kiezen hun prive-gegevens met anderen op deze chat te delen.</p>
+        <p style="text-align: right"><a href="javascript:void(0)" class="got_its">OKE</a></p>
+   </td>
+  </tr>
+
+  </tr>
+  </table>
+
+
+									</div>
+									<ul id="messages">
+										
+									</ul>
+								</div>	
+							</div>
+							<form id="messageForm">
+								<input id="sendMessageTextBox" class="foo" type="text"autocomplete="off" />
+										<img id="emotions-button" src="/static/images/emotions-button.png" onclick="window.open('/static/scripts/index.html', 'emotions', 'width=800,height=600');                                                    return false;">
+
+								<img id="colorpickerIcon" src="/static/images/color-icon.png" />
+								<input type="text" id="color" name="color" value="#FFFFFF" />
+							</form>
+						</div>
+
+						<div id="privateChat">
+							<div id="privateChatTabs">
+								<ul>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="right">
+						<div id="rightTabs">
+							<button id="channelsButton" class="buttonc buttonc-channel">Kanalen</button>
+							<button id="usersButton" class="buttonc buttonc-chatters">Chatters</button>
+							<button id="optionsButton" class="buttonc-opties">Opties</button>
+						</div>
+						<div id="channelTabPage">
+							<div class="ChannelHeader" id="channelHeader">Kanalen</div>
+							<ul id="channelsList">
+							</ul>
+							<button id="createChannelButton" class="buttonc-newchannel">Maak een nieuw kanaal</button>
+						</div>
+						<div id="usersTabPage">
+							<div class="TabspageHeader" id="usersHeader"></div>
+							<ul id="usersList">
+							</ul>
+							<ul id="searchUsersList">
+							</ul>
+							<div id="cyberadminbuttons">
+								<button id="superButton" class="buttonc-super">Super</button>
+								<button id="operButton" class="buttonc-oper">Oper</button>
+								<button id="vButton" class="buttonc-normal">V</button>
+								<button id="xButton" class="buttonc-silent">X</button>
+							</div>
+							<div id="operbuttons">
+								<button id="kickButton" class="buttonc-kick">Kick</button>
+								<button id="banButton" class="buttonc-ban">Ban</button>
+							</div>
+							<button id="ignoreButton" class="buttonc-ignore">Negeer</button>
+							<button id="privateButton" class="buttonc-private">privé</button>
+							<button id="button" class="buttonc-rules"onclick="window.open('/static/regels/index.html', 'fc_rules', 'width=800,height=600');
+                                                                return false;">Regels</button>
+
+
+							<button id="searchChatButton" class="buttonc-search">Zoek chatter</button>
+						</div>
+						<div id="optionsTabPage">
+							<div class="redHeader" id="optionsHeader">Opties</div>
+
+<br>
+								<input type="checkbox" id="noStatusMessagesCheckBox" value="yes" /> Geen status berichten<br />
+								<input type="checkbox" id="textInStandardColorCheckBox" value="yes" /> Tekst in standaard kleur<br />
+								<input type="checkbox" id="ignorePrivateMessagesCheckBox" value="yes" /> Negeer privé berichten<br />
+								<input type="checkbox" id="privateWindowsCheckBox" value="yes" checked="checked" /> privé vensters<br />
+								<br>
+								<p>Tekst grootte:</p>
+<br>
+								<div id="textSizeSlider"></div>
+ 
+								
+								<input type="file" id="siofu_input" />
+								<button id="uploadImageButton" class="fullButton">Upload je profiel foto</button>
+								
+								<img id="bigProfIm" />
+						</div>
+						<div id="searchTabPage">
+							<div class="redHeader" id="searchHeader">Zoek Chatter</div>
+							<form id="searchForm">
+								<label for="searchOn">op:</label><br />
+								<input type="radio" name="searchOn" checked="checked" id="searchOn" value="Channel"> Kanaal<br />
+								<input type="radio" name="searchOn" id="searchOn" value="Whole"> Hele chat<br />
+								
+								<label for="searchGender">Geslacht:</label><br />
+								<input type="radio" name="searchGender" id="searchGender" value="Male"> Man<br />
+								<input type="radio" name="searchGender" id="searchGender" value="Vrouw"> Female<br />
+								<input type="radio" name="searchGender" checked="checked" id="searchGender" value="both"> Beide<br />
+								
+								<label for="searchName">Naam:</label><br />
+								<input type="text" name="searchName" id="searchName" />
+								
+								<button id="doSearchButton" class="buttonc-searchc">Zoek</button>
+								<button id="cancelSearchButton" class="buttonc-searchcancel">Annuleer</button>
+							</form>
+						</div>
+						<div id="createChannelTabPage">
+							<div class="redHeader" id="createChannelHeader">Nieuw kanaal</div>
+							<form id="createChannelForm">
+<label for="newChannelName">Naam:</label><br />
+<input type="text" id="newChannelName" maxlength="15"minlength="3"/><br />
+<label for="newChannelTopic">Onderwerp:</label><br />
+<input type="text" id="newChannelTopic" maxlength="140"/><br />
+								<label for="newChannelType">Type:</label><br />
+								<input type="radio" name="newChannelType" id="newChannelTypeAdmin" value="Admin"> Admin<br />
+								<input type="radio" checked="checked" name="newChannelType" id="newChannelTypeNormal" value="Normal"> Normaal<br />
+								
+								<button id="doCreateChannelButton" class="twoButton">Maak</button>
+								<button id="cancelCreateChannelButton" class="twoButton">Annuleer</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				
+				<p id="disconnectMessage">Verbinding met de chatclient is verbroken.</p>
+			</div>
+			<div id="logo" class="borderedBlock">
+				<h1>Chatbox logo</h1>
+			</div>
+	
+			<div id="userPopUp">
+				
+			</div>
+			
+			<div id="colorpickerdialog" title="Kies een chat kleur.">
+				<div id="colorpicker"></div>
+
+			</div>
+			
+			
+			<div id="clogdialog" title="Chat Logfile">
+				<span id="clog"></span>
+			</div>
+			
+		</div>
+		
+		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="/static/scripts/jquery.md5.js" ></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script type="text/javascript" src="/static/scripts/farbtastic.js"></script>
+<script src="//twemoji.maxcdn.com/2/twemoji.min.js"></script>
+		<script src="/static/scripts/emoticons.js"></script>
+		<script src="/static/scripts/jquery.cookie.js"></script>
+		<script src="/static/scripts/interface.js"></script>
+		<script src="/siofu/client.js"></script>
+
+	</body>
+
+</html>
+
+
